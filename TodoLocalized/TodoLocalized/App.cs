@@ -5,19 +5,17 @@ using System.Globalization;
 
 namespace TodoLocalized
 {
-	public  class App : Application
+	public class App : Application
 	{
 		static TodoItemDatabase database;
 
-			public App ()
-			{
-			L10n.SetLocale ();
-
-			var netLanguage = DependencyService.Get<ILocale>().GetCurrent();
-			AppResources.Culture = new CultureInfo (netLanguage);
-
+		public App ()
+		{
+			var ci = DependencyService.Get<ILocale>().GetCurrentCultureInfo();
+			L10n.SetLocale (ci);
+			AppResources.Culture = ci;
+            
 			var mainNav = new NavigationPage (new TodoListPage ());
-
 			MainPage = mainNav;
 		}
 

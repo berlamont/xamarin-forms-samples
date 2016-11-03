@@ -1,25 +1,20 @@
-﻿using System;
-using Xamarin.Forms;
-using Microsoft.WindowsAzure.MobileServices;
+﻿using Xamarin.Forms;
 
-namespace AzureTodo
+namespace TodoAzure
 {
 	public class App : Application
 	{
-		public static MobileServiceClient Client { get; private set; }
+		public static IAuthenticate Authenticator { get; private set; }
 
 		public App ()
 		{
-			Client = new MobileServiceClient (Constants.ApplicationURL, Constants.ApplicationKey);
+			// The root page of your application
+			MainPage = new NavigationPage (new LoginPage ());
+		}
 
-			if (Client.CurrentUser == null)
-            {
-                MainPage = new NavigationPage(new Login());
-            }
-			else
-            {
-                MainPage = new NavigationPage(new TodoList());
-            }
+		public static void Init (IAuthenticate authenticator)
+		{
+			Authenticator = authenticator;
 		}
 
 		protected override void OnStart ()
@@ -38,3 +33,4 @@ namespace AzureTodo
 		}
 	}
 }
+

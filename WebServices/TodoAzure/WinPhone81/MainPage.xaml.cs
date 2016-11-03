@@ -28,7 +28,7 @@ namespace WinPhone81
 
             this.NavigationCacheMode = NavigationCacheMode.Required;
 
-            LoadApplication(new AzureTodo.App());
+            LoadApplication(new TodoAzure.App());
         }
 
         /// <summary>

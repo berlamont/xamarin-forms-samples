@@ -8,9 +8,9 @@ using Android.Views;
 using Android.Widget;
 using Android.OS;
 
-namespace AzureTodo.Droid
+namespace TodoAzure.Droid
 {
-	[Activity (Label = "AzureTodo.Droid", 
+	[Activity (Label = "TodoAzure.Droid", 
 		Icon = "@drawable/icon", 
 		MainLauncher = true, 
 		ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation,

@@ -1,12 +1,9 @@
-﻿using System;
-
-namespace AzureTodo
+﻿namespace TodoAzure
 {
 	public static class Constants
 	{
-		// Sign up for an Azure account at https://account.windowsazure.com/signup
-		// Replace strings with your mobile services url and key.
-		public static string ApplicationURL = @"";
-		public static string ApplicationKey = @"";
-	}
+        // Replace strings with your mobile services and gateway URLs.
+        public static string ApplicationURL = @"<INSERT_MOBILE_APP_URL_HERE>";
+    }
 }
+

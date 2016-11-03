@@ -5,7 +5,7 @@ using System.Linq;
 using Foundation;
 using UIKit;
 
-namespace AzureTodo.iOS
+namespace TodoAzure.iOS
 {
 	public class Application
 	{
